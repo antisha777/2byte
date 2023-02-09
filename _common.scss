@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+h1, h2, h3, p {
+    margin: 0;
+}
+
+body {
+    position: relative;
+    min-width: 320px;
+    font-size: 16px;
+    font-family: $font;
+    color: #333;
+    margin: 0;
+    background: $white;
+    overflow-x: hidden;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 32px;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        content: '';
+        background: url('./assests/img/lines-bg.png') repeat;
+        max-width: 1440px;
+        z-index: -9;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.but-effect:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 60px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: -80px;
+    transform: skewX(-45deg);
+}
+
+.but-effect:hover {
+    background: $blue;
+    color: #fff;
+}
+
+.but-effect:hover:before {
+    left: 100%;
+    transition: .5s ease-in-out;
+}
+
+h1#fps {
+    display: none;
+}
+
+.expandable-text button {
+    max-width: 150px;
+    text-align: start;
+    padding: 0;
+    color: #278aff;
+    font-size: 14px;
+    margin-top: 20px;
+}
