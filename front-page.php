@@ -5,7 +5,7 @@
  *
  */
 
-get_header('front');
+get_header('front-new');
 ?>
 
 <main class="main">
@@ -17,8 +17,10 @@ get_header('front');
          </div>
             <div class="section__inner">
                 <div class="about">
-                <div class="block-simbol block-simbol__left">0</div>
-                <div class="block-simbol block-simbol__right">1</div>
+                <div class="block-simbol">
+                    <div class="block-simbol block-simbol__left">0</div>
+                    <div class="block-simbol block-simbol__right">1</div>
+                </div>
                     <div class="about__content">
                         <h2 class="about-title">Ремонтируем компьютерную технику</h2>
                             <div class="about__description">
@@ -56,64 +58,77 @@ get_header('front');
                             <div class="row popular__row">
 
                                 <div class="column popular__col">
-                                    <div class="popular__box">
-                                        <div class="popular__overlay"></div>
-                                        <img src="<?php echo get_template_directory_uri() ?>/assests/img/computer.jpg" alt="Компьютеры" class="popular__background">                   
-                                    </div>
-                                    <div class="popular__item">
-                                        <h3 class="popular__title">Ремонт компьютеров</h3>
-                                    </div>
+                                    <a href="<?php echo get_permalink() ?>/repair/computer-repair" class="popular__link">
+                                        <div class="popular__box">
+                                            <div class="popular__overlay"></div>
+                                            <img src="<?php echo get_template_directory_uri() ?>/assests/img/computer.jpg" alt="Компьютеры" class="popular__background">                   
+                                        </div>
+                                        <div class="popular__item">
+                                            <h3 class="popular__title">Ремонт компьютеров</h3>
+                                        </div>
+                                    </a>
                                 </div>
 
                                 <div class="column popular__col">
-                                    <div class="popular__box">
-                                        <div class="popular__overlay"></div>
-                                        <img src="<?php echo get_template_directory_uri() ?>/assests/img/noutbuka.jpg" alt="Компьютеры" class="popular__background">                   
-                                    </div>
-                                    <div class="popular__item">
-                                        <h3 class="popular__title">Ремонт ноутбуков</h3>
-                                    </div>
-                                    <div class="popular__poinst">10110111101011</div>
+                                    <a href="<?php echo get_permalink() ?>/repair/laptop-repair" class="popular__link">
+                                        <div class="popular__box">
+                                            <div class="popular__overlay"></div>
+                                            <img src="<?php echo get_template_directory_uri() ?>/assests/img/noutbuka.jpg" alt="Компьютеры" class="popular__background">                   
+                                        </div>
+                                        <div class="popular__item">
+                                            <h3 class="popular__title">Ремонт ноутбуков</h3>
+                                        </div>
+                                        <div class="popular__poinst">10110111101011</div>
+                                    </a>
                                 </div>
 
                                 <div class="column popular__col">
-                                    <div class="popular__box">
-                                        <div class="popular__overlay"></div>
-                                        <img src="<?php echo get_template_directory_uri() ?>/assests/img/remont-televizorov.jpg" alt="Компьютеры" class="popular__background">                   
-                                    </div>
-                                    <div class="popular__item">
-                                        <h3 class="popular__title">Ремонт телевизоров</h3>
-                                    </div>
+                                    <a href="<?php echo get_permalink() ?>/repair/repair-tv" class="popular__link">
+                                        <div class="popular__box">
+                                            <div class="popular__overlay"></div>
+                                            <img src="<?php echo get_template_directory_uri() ?>/assests/img/remont-televizorov.jpg" alt="Компьютеры" class="popular__background">                   
+                                        </div>
+                                        <div class="popular__item">
+                                            <h3 class="popular__title">Ремонт телевизоров</h3>
+                                        </div>
+                                    </a>
                                 </div>
 
                                 <div class="column popular__col">
-                                    <div class="popular__box">
-                                        <div class="popular__overlay"></div>
-                                        <img src="<?php echo get_template_directory_uri() ?>/assests/img/telephone.jpg" alt="Компьютеры" class="popular__background">                  
-                                    </div>
-                                    <div class="popular__item">
-                                        <h3 class="popular__title">Ремонт смартфонов</h3>
-                                    </div>
+                                    <a href="<?php echo get_permalink() ?>/repair/phone-repair" class="popular__link">
+                                        <div class="popular__box">
+                                            <div class="popular__overlay"></div>
+                                            <img src="<?php echo get_template_directory_uri() ?>/assests/img/telephone.jpg" alt="Компьютеры" class="popular__background">                  
+                                        </div>
+                                        <div class="popular__item">
+                                            <div class="popular__link"></div>
+                                            <h3 class="popular__title">Ремонт смартфонов</h3>
+                                        </div>
+                                    </a>
                                 </div>
 
                                 <div class="column popular__col">
-                                    <div class="popular__box">
-                                        <div class="popular__overlay"></div>
-                                        <img src="<?php echo get_template_directory_uri() ?>/assests/img/databack.jpg" alt="Компьютеры" class="popular__background">                  
-                                    </div>
-                                    <div class="popular__item">
-                                        <h3 class="popular__title">Восстановление данных</h3>
-                                    </div>
+                                    <a href="/" class="popular__link">
+                                        <div class="popular__box">
+                                            <div class="popular__overlay"></div>
+                                            <img src="<?php echo get_template_directory_uri() ?>/assests/img/databack.jpg" alt="Компьютеры" class="popular__background">                  
+                                        </div>
+                                        <div class="popular__item">
+                                            <h3 class="popular__title">Восстановление данных</h3>
+                                        </div>
+                                    </a>
                                 </div>
 
                                 <div class="column popular__col">
-                                    <div class="popular__box">
-                                        <div class="popular__overlay"></div>
-                                        <img src="<?php echo get_template_directory_uri() ?>/assests/img/tabel.png" alt="Компьютеры" class="popular__background">                   
-                                    </div>
-                                    <div class="popular__item">
-                                        <h3 class="popular__title">Установка программ</h3>
-                                    </div>
+                                    <a href="<?php echo get_permalink() ?>/services/computer-help" class="popular__link">
+                                        <div class="popular__box">
+                                            <div class="popular__overlay"></div>
+                                            <img src="<?php echo get_template_directory_uri() ?>/assests/img/tabel.png" alt="Компьютеры" class="popular__background">                   
+                                        </div>
+                                        <div class="popular__item">
+                                            <h3 class="popular__title">Установка программ</h3>
+                                        </div>
+                                    </a>
                                 </div>
 
                             </div>

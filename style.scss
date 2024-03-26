@@ -5,6 +5,8 @@
 
 
 
+
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -26,6 +28,12 @@
         }
 }
 
+.container-menu {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
 .main {
     flex: 1;
 }
@@ -36,22 +44,6 @@
         color: $header;
     }
 
-    // background: #000 url('./assests/img/hedr02.jpg');
-    // margin-bottom: 50px;
-
-    // &::before {
-    //     position: absolute !important;
-    //     top: 0;
-    //     left: 0;
-    //     bottom: 0;
-    //     right: 0;
-    //     margin: auto;
-    //     content: '';
-    //     background: url('./assests/img/lines-bg.png') repeat-y;
-    //     width: 1379px;
-    //     left: 83px;
-    // }
-
     .container {
         position: relative;
         padding: 30px 20px 70px; 
@@ -59,7 +51,7 @@
 
 
     &__top {
-        display: flex;
+        // display: flex;
         justify-content: space-between;
         align-items: baseline;
         margin-bottom: 120px;
@@ -67,10 +59,11 @@
         @include _768() {
             padding: 0 15px;
             align-items: center;
+            margin-bottom: 65px;
         }
 
         @include _480() {
-            margin-bottom: 60px;
+            margin-bottom: 60px; 
         }
     }
 
@@ -111,6 +104,26 @@
         right: 0;
         top: 204px;
 
+        @include _768() {
+            top: 275px;
+            width: 100%;
+            height: 358px;
+
+            @include _420() {
+                height: 400px;
+            }
+        }
+
+        & video {
+            background: no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+            text-align: end;
+            object-fit: cover;
+        }
+
         &::before {
             content: '';
             width: 147px;
@@ -123,23 +136,9 @@
         }
    
 
-        @include _1165() {
+        @include _1170() {
             opacity: .5;
         }
-
-            @include _768() {
-                opacity: .3;
-                right: 130px;
-                top: 75px;
-            }
-
-                @include _620() {
-                    right: 50px;
-                }
-
-                    @include _480() {
-                        right: -50px;
-                    }
     }
 
     &__wave {
@@ -155,7 +154,6 @@
         }
 
         & img {
-            // max-width: 100%;
             max-height: 100%;
             background: no-repeat;
             background-size: cover;
@@ -178,7 +176,7 @@
 
     &__content {
 
-        padding-bottom: 150px;
+        padding-bottom: 50px;
 
         @include _768() {
             display: flex;
@@ -190,7 +188,6 @@
     &__mobile {
         display: flex;
         justify-content: space-between;
-        // align-items: baseline;
         width: 100%;
 
         @include _768() {
@@ -209,6 +206,11 @@
         font-size: 11px;
         display: flex;
         flex-direction: column;
+
+        &_page {
+            width: 100%;
+        }
+        
     }
 
     &__menu {
@@ -273,7 +275,6 @@
 
             @include _768() {
                 max-width: 100%;
-                // flex-wrap: inherit;
             }
 
                 @include _480() {
@@ -302,6 +303,7 @@
     flex-direction: column;
     text-align: right;
     color: $white;
+
 
     &_page {
             width: 100%;
@@ -345,19 +347,28 @@
     &__title {
         font-size: 55px;
         font-weight: 600;
-        padding-bottom: 20px;
+        padding-bottom: 60px;
         text-transform: uppercase;
 
-        @include _480() {
-            font-size: 28px;
-        }
+        @include _620() {
+            font-size: 36px;
+
+            @include _480() {
+                font-size: 28px;
+            }
+        } 
     }
 
     &__subtitle {
         font-size: 28px;
-        padding: 0 0 32px 75px;;
+        padding: 0 0 60px 75px;;
         text-transform: uppercase;
         position: relative;
+
+        @include _620() {
+            padding-left: 59px;
+            font-size: 22px;
+        }
 
         &::before {
             content: '';
@@ -368,10 +379,6 @@
             left: 0;
             top: 12px;
         }
-
-        // &::after {
-            
-        // }
     }
 
     &__triangle {
@@ -414,12 +421,39 @@
         padding: 20px 0;
         margin-left: 50px;
 
+        @include _768() {
+            margin-left: 0px;
+            padding: 50px 0 0 0;
+
+            @include _620() {
+                font-size: 16px;
+                margin-top: 60px;
+
+                @include _480() {
+                    margin-top: 0;
+
+                    @include _480() {
+                        font-size: 14px;
+                    }
+                }
+            }
+        } 
+
+
         & span {
             font: 400 35px/1 'Open Sans', sans-serif;
             position: relative;
             color: #111718;
             display: inline-block;
             transform: translateY(6px);
+
+            @include _620() {
+               font-size: 26px;
+
+               @include _480() {
+                        font-size: 18px;
+                    }
+            }
 
             &::before {
                 content: '';
@@ -431,6 +465,15 @@
                 left: 10px;
                 top: -5px;
                 z-index: -1;
+
+                @include _620() {
+                   width: 12px;
+                    height: 40px;
+
+                    @include _420() {
+                        height: 30px;
+                    }
+                }
             }
         }
 
@@ -445,7 +488,11 @@
     outline: none;
     border: none;
     cursor: pointer;
-    border: 1px solid #fff;
+    transition: .5s;
+
+    &:hover {
+        background: $background-red1;
+    }
 
     &_large {
         max-width: 203px;
@@ -499,7 +546,6 @@
     }
 
     &__link {
-        // opacity: .4;
         transition: .5s;
 
         &:hover{
@@ -510,7 +556,14 @@
 
 .social-inner {
     margin-top: 32px;
+    font-weight: 400;
+    font-size: 20px;
+
+    @include _768() {
+        text-align: center;
+    }
 }
+
 
 h2.about-title {
     position: relative;
@@ -520,17 +573,6 @@ h2.about-title {
     @include _480() {
         font-size: 28px;
     }
-
-    // &::before {
-    //     content: "";
-    //     width: 111px;
-    //     height: 9px;
-    //     background: #dc3232;
-    //     position: absolute;
-    //     left: 85%;
-    //     top: 13px;
-    //     z-index: -1
-    // }
 }
 
 #more {display: none;}
@@ -540,7 +582,6 @@ h2.about-title {
 
 .section {
     padding: 50px 0;
-    // overflow: hidden;
 
     &__header {
 
@@ -558,44 +599,41 @@ h2.about-title {
         font-weight: 700;
         position: relative;
         display: inline-block;
-        // color: $white;
-
-        // @include _480 () {
-        //     font-size: 26px;
-        // }
-
-        // @include _320 () {
-        //     font-size: 24px;
-        // }
 
         &::before {
             content: '';
             width: 111px;
             height: 9px;
-            background: #a30303;
+            background: $background-red;
             position: absolute;
             left: 80%;
             top: 45px;
-            z-index: -1;
+            // z-index: -1;
         }
     }
 
     &__inner {
-        position: relative;
+        position: relative;   
     }
 
     &__subtitle {
-
-        // color: $white;
 
         &_bottom {
             padding-bottom: 25px;
         }
 
         &_blue {
-            color: $blue;
+            // color: $blue;
+            font-size: 28px;
             text-decoration: underline;
             padding-bottom: 32px;
+
+            @include _768() {
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                padding-bottom: 0;
+            }
         }
     }
 
@@ -655,7 +693,7 @@ h2.about-title {
 
     &__description {
         padding-left: 15px;
-        box-shadow: inset 2px 0px 0px #a20025;
+        box-shadow: inset 2px 0px 0px $background-red;
         margin: 0 30px 0 2px;
     }
 
@@ -699,10 +737,6 @@ h2.about-title {
     flex-wrap: wrap;
     justify-content: space-around;
 
-    // @include _1165() {
-    //     gap: 50px;
-    // }
-
     &_space-between {
         justify-content: space-between;
 
@@ -715,6 +749,14 @@ h2.about-title {
         display: inline-block;
         font: 800 140px/1 'Gilroy', sans-serif;
         color: $background-red;
+
+        @include _1170() {
+            font-size: 100px;
+        }
+
+             @include _850() {
+                font-size: 80px;
+            }
     }
 
     &__item {
@@ -723,6 +765,14 @@ h2.about-title {
         position: relative;
         display: inline-block;
         margin-bottom: 92px;
+
+            @include _1170() {
+                font-size: 100px;
+
+                @include _850() {
+                font-size: 80px;
+                }
+            }
     }
 
     &__title {
@@ -731,10 +781,14 @@ h2.about-title {
     font: 800 23px/1 'Gilroy', sans-serif;
     padding: 2px 14px;
     position: absolute;
-    left: 50%;
+    left: 40%;
     top: 50%;
     color: #2c2c2c;
     white-space: nowrap;
+
+    @include _850() {
+        font-size: 16px;
+        }
     }
 }
 
@@ -752,10 +806,10 @@ h2.about-title {
     min-width: 100px;
     width: 100%;
     margin-bottom: 20px;
-    box-shadow: inset 0px 0px 0px 1px rgb(0 0 0 / 10%), 0px 10px 30px rgb(0 0 0 / 10%);
 
     &__form {
         position: relative;
+        box-shadow: inset 0px 0px 0px 1px rgb(0 0 0 / 10%), 0px 10px 30px rgb(0 0 0 / 10%);
     }
 
     &__input {
@@ -878,7 +932,8 @@ h2.about-title {
      color: #ffffff;
      box-shadow: 1px 5px 10px -5px black;
      transition: all 0.3s ease;
-     background: $blue;
+     // background: $blue;
+     background: #949494;
 }
 
 
@@ -909,6 +964,9 @@ h2.about-title {
 
     &__row {
         // margin-bottom: -60px;
+        // @include _768() {
+        //     display: inline;
+        // }
     }
 
     &__col {
@@ -917,6 +975,10 @@ h2.about-title {
         z-index: 0;
         margin: 15px;
         height: 100%;
+
+        @include _768() {
+            width: 100%;
+        }
     }
 
     &__overlay {
@@ -1012,12 +1074,13 @@ h2.about-title {
 .block-simbol {
     font: 600 772px/1 'Open Sans', sans-serif;
     color: $background-red;
-    position: absolute;
+    position: relative;
     will-change: transform;
     transform: translate3d(0, 0, 0);
     animation: floating infinite ease-in-out 5s;
 
-    &__left{
+    &__left {
+        position: absolute;
         top: -343px;
         right: 0;
         left: -399px;
@@ -1025,9 +1088,14 @@ h2.about-title {
     }
 
     &__right {
+        position: absolute;
         top: 585px;
-        right: -236px;
+        left: 1202px;
         z-index: -1;
+    }
+
+    @include _1170 {
+        display: none;
     }
 }
 
@@ -1035,7 +1103,6 @@ h2.about-title {
 
 .about {
     display: flex;
-    justify-content: space-between;
     margin-right: 300px;
 
      &::before {
@@ -1090,7 +1157,7 @@ h2.about-title {
 
     &__description {
         padding-left: 15px;
-        box-shadow: inset 2px 0px 0px #a20025;
+        box-shadow: inset 2px 0px 0px $background-red;
         margin-left: 3px;
     }
 
@@ -1145,14 +1212,13 @@ h2.about-title {
 .selection {
 
     position: relative;
-    // height: 400px;
 
         &::before {
             content: "";
             // background: url('./assests/img/select01.jpg') no-repeat;
             width: 973px;
             height: 404px;
-            background: #f4f6f2;
+            background: #f4f4f4;
             position: absolute;
             top: 46px;
             left: 200px;
@@ -1161,16 +1227,16 @@ h2.about-title {
 
         &::after {
             content: "";
-            // width: 147px;
-            // height: 147px;
-            width: 600px;
-            height: 320px;
-            // background: url('./assests/img/points.png') no-repeat;
-            background: url('./assests/img/select01.jpg') no-repeat;
+            width: 147px;
+            height: 147px;
+            // width: 600px;
+            // height: 320px;
+            background: url('./assests/img/points.png') no-repeat;
+            // background: url('./assests/img/select01.jpg') no-repeat;
             position: absolute;
             right: 189px;
             bottom: 250px;
-            // z-index: -2;
+            z-index: -2;
         }
 
     &__title {
@@ -1214,9 +1280,20 @@ h2.about-title {
 
     &__inner {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         justify-content: space-around;
         margin-bottom: 150px;
+
+        @include _1050 () {
+            justify-content: center;
+
+            @include _768 () {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+
     }
 
     &__col {
@@ -1228,7 +1305,7 @@ h2.about-title {
 /*section price*/
 
 .tabs-navigation li:active, .tabs-navigation li:visited {
-    border-bottom: 2px solid #196dff;
+    border-bottom: 2px solid $background-red;
   }
 
 .block {
@@ -1271,9 +1348,9 @@ h2.about-title {
         padding-bottom: 20px; 
         .active { 
             background: white;
-            color: #a30303;
+            color: $background-red;
             padding: 5px;
-            border: #a30303 2px solid;
+            border: $background-red 2px solid;
             box-shadow: inset 0px 0px 0px 1px rgb(0 0 0 / 10%), 0px 10px 10px rgb(0 0 0 / 20%);       
           } 
     } 
@@ -1363,6 +1440,15 @@ h2.about-title {
     position: relative;
     margin-left: 35px;
 
+    @include _850() {
+        width: 100%;
+        margin-bottom: 50px;
+
+        @include _480() {
+            margin-left: 0;
+        }
+    }
+
     &__byte {
         font: 800 125px/1 'Gilroy', sans-serif;
         color: $background-red;
@@ -1371,12 +1457,20 @@ h2.about-title {
         left: 22px;
         z-index: 2;
 
+        @include _480() {
+            font-size: 80px;
+        }
+
         &::before {
             content: 'айта';
             position: absolute;
             bottom: 12px;
             left: 178px;
             font-size: 18px;
+
+            @include _480() {
+                left: 116px;
+            }
         }
     }
 
@@ -1387,6 +1481,10 @@ h2.about-title {
         left: -96px;
         top: 69px;
         font: 600 11px/1 'Open sans', sans-serif;
+
+        @include _480() {
+            left: -77px;
+        }
 
         &::before {
             content: '';
@@ -1407,6 +1505,12 @@ h2.about-title {
     &__contact {
         width: 45%;
         padding-top: 150px;
+
+        @include _850() {
+            width: 100%;
+            padding-top: 50px;
+            text-align: center;  
+        }
     }
 
     &__image {
@@ -1431,6 +1535,10 @@ h2.about-title {
             -moz-animation: floating2 infinite ease-in-out 5s;
             -ms-animation: floating2 infinite ease-in-out 5s;
             animation: floating2 infinite ease-in-out 5s;
+
+            @include _768() {
+                right: 15px;
+            }
         }
     }
 
@@ -1447,8 +1555,12 @@ h2.about-title {
 
     &__item {
         margin-left: 146px;
-        transform: translateY(-37px);
+        // transform: translateY(-37px);
         position: relative;
+
+        @include _768() {
+            margin-left: 50px
+        }
 
         &::before {
             content: '';
@@ -1460,9 +1572,14 @@ h2.about-title {
             top: 15px;
         }
 
-        &h4 {
+        & h4 {
             font-weight: 400;
             font-size: 20px;
+
+            @include _768() {
+                max-width: 350px;
+                width: 100%;
+            }
         }
     }
 }
@@ -1472,14 +1589,20 @@ h2.about-title {
     margin: auto;
     padding: 0 15px;
 
+    @include _850() {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
     &_wight {
         display: flex;
         max-width: 1440px;
         justify-content: space-between;
+        margin-bottom: 20px;
 
-        @include _792() {
-            justify-content: space-evenly;
-            flex-wrap: wrap;
+        @include _850() {
+            display: inline-block;
         }
     }
 
@@ -1487,6 +1610,11 @@ h2.about-title {
         display: flex;
         height: 510px;
         justify-content: space-between;
+
+        @include _850() {
+            display: inline-block;
+            width: 100%;
+        }
     }
 }
 
@@ -1504,6 +1632,20 @@ h2.about-title {
     &__maps {
         max-width: 750px;
         width: 100%;
+
+        @include _1170() {
+            max-width: 500px;
+         }
+
+            @include _1050() {
+                max-width: 400px;
+            }
+
+                @include _850() {
+                    max-width: 100%;
+                    width: 100%;
+                    height: 200px;
+                }
     }
 }
 
@@ -1515,13 +1657,17 @@ h2.about-title {
 .contact-form {
     max-width: 500px;
 
-    @include _768 {
-        width: 100%;
+    @include _1050 {
+        width: 400px;
     }
+
+        @include _850 {
+            width: 100%
+        }
 
         &__padding {
             padding: 40px;
-            border: 2px solid #a30303;
+            border: 2px solid $background-red;
         }
 }
 
@@ -1539,7 +1685,7 @@ h2.about-title {
 input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required {
 
     border: none;
-    border-bottom: 2px solid #a30303;
+    border-bottom: 2px solid $background-red;
     padding: 15px;
     background: none;
     width: 100%;
@@ -1556,11 +1702,12 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
     padding: 15px 0;
     margin-bottom: 16px;
     color: #ffffff;
-    background: #a30303;
+    background: $background-red;
     text-align: center;
     outline: none;
     border: none;
     cursor: pointer;
+    transition: 0.5s;
 
 
     &:before {
@@ -1574,7 +1721,7 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
         transform: skewX(-45deg);
     }
     &:hover {
-        background: #780202;
+        background: $background-red1;
     }
     &:hover:before {
         left: 100%;
@@ -1666,6 +1813,12 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
 
 p.section__subtitle.subtitle-bottom {
     font-size: 28px;
+
+    @include _768() {
+         text-align: center;
+         font-size: 18px;
+        }
+
 }
 
 //end
@@ -1676,7 +1829,7 @@ p.section__subtitle.subtitle-bottom {
     position: fixed;
     width: 100%;
     height: 120px;
-    background: linear-gradient( 360deg ,transparent,#000);
+    background: linear-gradient( 360deg ,transparent,#fff);
     top: 0;
     left: 0;
     right: 0;
@@ -1712,9 +1865,9 @@ p.section__subtitle.subtitle-bottom {
 .mobile-menu {
     transition: all .25s;
     position: fixed;
-    top: 25px;
-    left: 15px;
-    height: 40px;
+    top: 30px;
+    left: 16px;
+    height: 45px;
     width: 40px;
     z-index: 10;
     cursor: pointer;
@@ -1734,7 +1887,7 @@ p.section__subtitle.subtitle-bottom {
     height: 4px;
     width: 40px;
     border-radius: 8px;
-    background-color: $white;
+    background-color: #333;
  }
 
  .bar {
@@ -1743,6 +1896,11 @@ p.section__subtitle.subtitle-bottom {
     left: 15px;
     top: 40px;
     z-index: 99;
+
+    @include _768() {
+        left: 16px;
+        top: 45px;
+        }
 
     &:before {
        @extend .b-a;
@@ -1769,6 +1927,7 @@ p.section__subtitle.subtitle-bottom {
     top: 0;
     left: 0;
     background: #000 url('./assests/img/hedr04.jpg');
+    background: white;
     overflow-y: auto;
 
     &:before {
@@ -1776,7 +1935,7 @@ p.section__subtitle.subtitle-bottom {
         position: fixed;
         width: 100%;
         height: 120px;
-        background: linear-gradient(360deg, transparent, #000);
+        background: linear-gradient(360deg, transparent, #fff);
         top: 0;
         left: 0;
         right: 0;
@@ -1797,6 +1956,7 @@ p.section__subtitle.subtitle-bottom {
     .bar {
         background-color: transparent;
         transition: all .25s;
+
         &:before {
            @extend .b-a-expanded;
            transform: rotate(45deg);
@@ -1811,12 +1971,6 @@ p.section__subtitle.subtitle-bottom {
 
 
  // адаптация для мобилок
-
-// div#block-7 {
-//     max-width: 300px;
-//     margin-left: 15px;
-//     width: 100%;
-// }
 
 .wpb_category_n_menu_accordion {
     max-width: 335px;
@@ -1834,6 +1988,18 @@ p.section__subtitle.subtitle-bottom {
 
 .wpb_category_n_menu_accordion ul > li li {
     background: #13244a;
+}
+
+.wpcf7 input[type="url"], .wpcf7 input[type="email"], .wpcf7 input[type="tel"] {
+    direction: ltr;
+    border: none;
+    border-bottom: 2px solid #dc3232;
+    padding: 15px;
+    background: none;
+    width: 100%;
+    outline: none;
+    outline: 0;
+    outline-offset: 0;
 }
 
  // end
@@ -1874,6 +2040,19 @@ transition: all 0.4s ease-in-out;
 }
 }
 
+
+.form {
+    &__fancy {
+        display: none;
+        // width: 500px;
+        // background: #F8F6F7;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+    }
+}
+
 // end
 
  @import "./media";
+
+ @import './page-phone';

@@ -50,6 +50,7 @@ function twobytes_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'twobytes' ),
+			'top' => esc_html__( 'Header', 'twobytes2' ),
 		)
 	);
 

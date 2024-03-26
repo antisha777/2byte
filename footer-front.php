@@ -34,7 +34,6 @@
                                         <div class="row">
                                             <div class="column">
                                                 <?php get_sidebar('footer'); ?>
-                                                <!-- 213 -->
                                                 <p class="column__police">Нажимая на кнопку вы соглашаетесь с 
                                                     <a href="#" class="column__blue">обработкой персональных данных</a>
                                                 </p>                                        
@@ -48,14 +47,14 @@
                                 <div class="container-info__contact">
                                         <h2 class="section__title section__title_white">Контакты</h2>
                                         <p class="section__subtitle subtitle-bottom">г.Томск, ул.Елизаровых 44
-                                        <p class="section__subtitle subtitle-bottom">т.938-936; 8 (952) 155-59-36</p>
+                                        <p class="section__subtitle subtitle-bottom"><a href="tel:т.938936" class="header-phone__number">т.938-936</a>; <a href="tel:89521555936">8 (952) 155-59-36</a ></p>
                                         <a href="#" class="section__subtitle section__subtitle_blue">twobytes@yandex.ru</a>
                                         <div class="social-inner">
                                             <p class="social-inner__title">Мы в социальных сетях</p>
                                             <ul class="social social_horizon">
                                                 <li class="social__item"><a href="#"><img class="social__link" src="<?php echo get_template_directory_uri() ?>/assests/img/vk.png" alt="Vk"></a></li>
-                                                <li class="social__item"><a href="#"><img class="social__link"  src="<?php echo get_template_directory_uri() ?>/assests/img/insta.png" alt="Instagram"></a></li>
-                                                <li class="social__item"><a href="#"><img class="social__link"  src="<?php echo get_template_directory_uri() ?>/assests/img/You.png" alt="Youtube"></a></li>
+                                                <li class="social__item"><a href="https://wa.me/79521555936?text=Здравствуйте%2C+у+меня+есть+вопрос"><img class="social__link"  src="<?php echo get_template_directory_uri() ?>/assests/img/whats.png" alt="Instagram"></a></li>
+                                                <li class="social__item"><a href="#"><img class="social__link"  src="<?php echo get_template_directory_uri() ?>/assests/img/telegram.png" alt="Youtube"></a></li>
                                             </ul>
                                         </div>  
                                 </div>
@@ -66,32 +65,6 @@
 
                         </div>
 </section>
-<!-- <section id="contacts" class="section-bottom">
-                        <div class="container-contacts">
-                            <div class="container-contacts_wight">
-                                <div class="container-info">
-                                    <div class="container-info__contact">
-                                        <h2 class="section__title section__title_white">Контакты</h2>
-                                        <p class="section__subtitle subtitle-bottom">г.Томск, ул.Елизаровых 44
-                                        <p class="section__subtitle subtitle-bottom">т.938-936; 8 (952) 155-59-36</p>
-                                        <a href="#" class="section__subtitle section__subtitle_blue">twobytes@yandex.ru</a>
-                                        <div class="social-inner">
-                                            <p class="social-inner__title">Мы в социальных сетях</p>
-                                            <ul class="social social_horizon">
-                                                <li class="social__item"><a href="#"><img class="social__link" src="<?php echo get_template_directory_uri() ?>/assests/img/vk_w.png" alt="Vk"></a></li>
-                                                <li class="social__item"><a href="#"><img class="social__link"  src="<?php echo get_template_directory_uri() ?>/assests/img/insta_w.png" alt="Instagram"></a></li>
-                                                <li class="social__item"><a href="#"><img class="social__link"  src="<?php echo get_template_directory_uri() ?>/assests/img/You_w.png" alt="Youtube"></a></li>
-                                            </ul>
-                                        </div>  
-                                    </div>
-                                    <div class="contacts__maps">
-                                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A08591060f0c36fd917b85be87c0d422836bc7bd66046efda2769322f484c549f&amp;source=constructor" max-width="500" width="100%" height="210px" frameborder="0"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>    
-</section>   -->
             <div class="container">
                 <div class="footer-inner">
                     <div class="footer-inner__left">
@@ -99,6 +72,12 @@
                         <a class="footer-inner__police" href="#">Политика конфиденциальности</a>
                         <p class="footer-inner__info">«Информация на сайте не является публичной офертой (ст. 437 ГК РФ)»</p>
                     </div>
+					<div class="footer-inner__centr">
+						<p class="footer-inner__info footer-inner__info_padding">ИП КРАСНОПЕРОВ ЮРИЙ МИХАЙЛОВИЧ</p>
+						<p class="footer-inner__info footer-inner__info_padding">ИНН 701410112189</p>
+						<p class="footer-inner__info footer-inner__info_padding">ОГРН 319703100061640</p>
+						<p class="footer-inner__info footer-inner__info_padding">Елизаровых 44</p>
+					</div>
                     <div class="footer-inner__right">
                         <nav class="navigation">
                             <ul class="navigation__list">
@@ -114,9 +93,25 @@
                 </div>
             </div>
         </footer>
-<!-------------------------modal form----------------------------> 
+<!-------------------------modal form---------------------------->  
         </main>
 </div>
+
+    <div id="form" class="contact-form form form__fancy">
+        <div class="contact-form__padding">
+            <div class="row">
+                <div class="column">
+                <?php get_sidebar('form'); ?>
+                <p class="column__police">Нажимая на кнопку вы соглашаетесь с 
+                    <a href="#" class="column__blue">обработкой персональных данных</a>
+                </p>                                        
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+<div id = "toTop" > ^ Наверх </div>
+
 </body>
 <!-- <script type="text/javascript" src="./js/cube.js"></script> -->
 <!-- <script  type="module" src="<?php echo get_template_directory_uri() ?>/assests/js/main.js"></script> -->
@@ -128,5 +123,7 @@
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/redAbout.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/anime.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/button.js"></script>
 
 </html>

@@ -4,8 +4,14 @@
     }
 }
 
-@mixin _1165 {
-    @media only screen and (max-width: 1165px)  { 
+@mixin _1170 {
+    @media only screen and (max-width: 1170px)  { 
+        @content;
+    }
+}
+
+@mixin _1050 {
+    @media only screen and (max-width: 1050px)  { 
         @content;
     }
 }
@@ -16,8 +22,8 @@
     }
 }
 
-@mixin _811 {
-    @media only screen and (max-width: 811px) { 
+@mixin _850 {
+    @media only screen and (max-width: 850px) { 
         @content;
     }
 }
@@ -42,6 +48,12 @@
 
 @mixin _480 {
     @media only screen and (max-width: 480px) { 
+        @content;
+    }
+}
+
+@mixin _420 {
+    @media only screen and (max-width: 420px) { 
         @content;
     }
 }
