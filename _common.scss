@@ -36,6 +36,7 @@ body {
 
 a {
     text-decoration: none;
+    color: $header;
 }
 
 button {
@@ -45,6 +46,10 @@ button {
     background: none;
     position: relative;
     overflow: hidden;
+    font-family: $font;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 .but-effect:before {
@@ -79,4 +84,21 @@ h1#fps {
     color: #278aff;
     font-size: 14px;
     margin-top: 20px;
+}
+
+#toTop {
+    width: 100px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: none;
+    color: #333;
+    font-family: verdana;
+    font-size: 11px;
+    border-bottom: 4px solid #dc3232;
 }

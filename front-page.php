@@ -9,23 +9,37 @@ get_header('front-new');
 ?>
 
 <main class="main">
-<!-------------------------section about------------------------->
-<section id="about" class="section">
-    <div class="container container_two">
-        <div class="section__header">
-            <!-- <h2 class="about-title">Ремонтируем компьютерную технику</h2> -->
-         </div>
-            <div class="section__inner">
-                <div class="about">
-                <div class="block-simbol">
-                    <div class="block-simbol block-simbol__left">0</div>
-                    <div class="block-simbol block-simbol__right">1</div>
-                </div>
-                    <div class="about__content">
-                        <h2 class="about-title">Ремонтируем компьютерную технику</h2>
-                            <div class="about__description">
-                                <p class="about__text1">Ваш компьютер вышел из строя или доставляет неприятности, и Вам требуется восстановить его работу как можно быстрее?</p>
-                             </div>
+
+    <div class="content">
+        <div class="block-simbol">
+            <div class="block-simbol block-simbol__left">0</div>
+            <div class="block-simbol block-simbol__right">1</div>
+        </div>
+        <!-- emd block-simbol -->
+    </div>
+    <!-- end content -->
+    <div class="container container_flex">
+        <div class=" content__left">
+            <!-------------------------section about------------------------->
+            <section id="about" class="section">
+                <div class="container container_two">
+                    <div class="section__header">
+                        <!-- <h2 class="about-title">Ремонтируем компьютерную технику</h2> -->
+                    </div>
+                    <!-- end section__header -->
+                    <div class="section__inner">
+                        <div class="about">
+                            <!-- <div class="block-simbol">
+                                <div class="block-simbol block-simbol__left">0</div>
+                                <div class="block-simbol block-simbol__right">1</div>
+                            </div> -->
+                            <!-- emd block-simbol -->
+                            <div class="about__content">
+                                <h2 class="about-title">Ремонтируем компьютерную технику</h2>
+                                <div class="about__description">
+                                    <p class="about__text1">Ваш компьютер вышел из строя или доставляет неприятности, и Вам требуется восстановить его работу как можно быстрее?</p>
+                                </div>
+                                <!-- end about__description -->
                                 <div class="expandable-text about__text2">
                                     <p>Когда ломается компьютер, нужна профессиональная помощь квалифицированного мастера. Мы оказываем «Услуги по ремонту компьютеров». С нашими мастерами можно заказать разовые услуги или заключить договор на долгосрочное сотрудничество. Мы выполняем ремонт и настройку компьютеров, ноутбуков, компьютерных сетей — любой сложности.
 
@@ -39,17 +53,18 @@ get_header('front-new');
 
                                     <button onclick="myFunction()" id="myBtn">Читать больше</button>
                                 </div>
+                                <!-- emd expandable-text about__text2 -->
                             </div>
-
-                            <div class="saidebar saidebar-right-none">     
-                                <?php get_sidebar('category'); ?>
-                            </div>
+                            <!-- end about__content -->      
                         </div>
+                        <!-- end about -->
                     </div>
+                    <!-- end section__inner -->
                 </div>
+                <!-- end container container_two -->
             </section>
-<!------ Услуги ----->
-<section id="popular" class="section">
+            <!------ Услуги ----->
+            <section id="popular" class="section">
                 <div class="container">
                     <div class="section__header">
                         <h2 class="about-title section__title">Основные услуги</h1>
@@ -137,48 +152,46 @@ get_header('front-new');
                         <!-- end services__inner -->
                 </div>
                 <!-- end container -->
-</section>
-<!----О нас ---->
-<section id="we" class="section">
-    <div class="container">
-        <div class="selection">
-            <div class="selection__title">
-                <h3 class="">Нас выбирают</h3>
-                <h4>Конкурентные преимущества нашей компании</h4>
-            </div>
-            <div class="selection__inner">
+            </section>
+            <!----О нас ---->
+            <section id="we" class="section">
+                <div class="container">
+                    <div class="selection">
+                        <div class="selection__title">
+                            <h3 class="">Нас выбирают</h3>
+                            <h4>Конкурентные преимущества нашей компании</h4>
+                        </div>
+                        <div class="selection__inner">
 
-                <div class="selection__col">
-                    <img src="./img/like.png" alt="icon1" class="column__icon">
-                    <h3 class="column__title">Удобно</h3>
-                    <div class="column__description">
-                        <p class="column__subtitle subtitle_width">Мы выполним ремонт компьютеров в удобное для Вас время. Вы можете привезти его в наш сервис или вызвать мастера по ремонту на дом</p>
+                            <div class="selection__col">
+                                <img src="./img/like.png" alt="icon1" class="column__icon">
+                                <h3 class="column__title">Удобно</h3>
+                                <div class="column__description">
+                                    <p class="column__subtitle subtitle_width">Мы выполним ремонт компьютеров в удобное для Вас время. Вы можете привезти его в наш сервис или вызвать мастера по ремонту на дом</p>
+                                </div>
+                            </div>
+
+                            <div class="selection__col">
+                                <img src="./img/free.png" alt="icon2" class="column__icon">
+                                <h3 class="column__title">Бесплатная диагностика</h3>
+                                <div class="column__description">
+                                    <p class="column__subtitle subtitle_width">Бесплатный выезд мастера по Томску в течении часа. Как правило, ремонт компьютеров на дому составляет 1,5 часа</p>
+                                </div>
+                            </div>
+
+                            <div class="selection__col">
+                                <img src="./img/time.png" alt="icon3" class="column__icon">
+                                <h3 class="column__title">Быстро</h3>
+                                <div class="column__description">
+                                    <p class="column__subtitle subtitle_width">Ремонт компьютеров в нашем сервисном центре проходит быстро и, как правило, длится 3 часаа</p>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
                 </div>
-
-                <div class="selection__col">
-                    <img src="./img/free.png" alt="icon2" class="column__icon">
-                    <h3 class="column__title">Бесплатная диагностика</h3>
-                    <div class="column__description">
-                        <p class="column__subtitle subtitle_width">Бесплатный выезд мастера по Томску в течении часа. Как правило, ремонт компьютеров на дому составляет 1,5 часа</p>
-                    </div>
-                </div>
-
-                <div class="selection__col">
-                    <img src="./img/time.png" alt="icon3" class="column__icon">
-                    <h3 class="column__title">Быстро</h3>
-                    <div class="column__description">
-                        <p class="column__subtitle subtitle_width">Ремонт компьютеров в нашем сервисном центре проходит быстро и, как правило, длится 3 часаа</p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
-               <!--  Price -->
-
-
+            </section>
+            <!--  Price -->
             <section id="price" class="section">
                 <div class="container">
                     <div class="section__header">
@@ -187,14 +200,14 @@ get_header('front-new');
                     <div class="services__inner">    
                         <div id="myTabs" class="tabs">
                             <nav class="navigation tabs__navigation">
-                              <ul class="navigation__list tabs__links "> 
+                                <ul class="navigation__list tabs__links "> 
                                 <li class="navigation__item"><a class="navigation__link">Ремонт компьютеров</a></li> 
                                 <li class="navigation__item"><a class="navigation__link">Ремонт ноутбуков</a></li> 
                                 <li class="navigation__item"><a class="navigation__link">Ремонт телевизоров</a></li>
                                 <li class="navigation__item"><a class="navigation__link">Ремонт смартфонов</a></li>
                                 <li class="navigation__item"><a class="navigation__link">ИТ - Услуги</a></li>
                                 <li class="navigation__item"><a class="navigation__link">Компьютерная помощь</a></li>
-                              </ul>
+                                </ul>
                             </nav>
                             <div class="tabs__content"> 
                                 <!-- Ремонт компьютеров -->
@@ -479,7 +492,7 @@ get_header('front-new');
                                     </div>
                                 </div>                              
                             </div> 
-                          </div>
+                            </div>
                     </div>                    
                 </div>
             </section>
@@ -503,11 +516,20 @@ get_header('front-new');
                     </div>
                 </div>
             </section>
-
-            <!-------------------------section contacts, form---------------->
-            
-        </main><!-- #main -->
+        </div>
+        <!-- end content__left -->
+        <div class="content__right">
+            <div class="saidebar saidebar-right-none">     
+                <?php get_sidebar('category'); ?>
+            </div>
+        </div>
+        <!-- end content__right -->
+    </div>
+    <!-- end container -->
+    
+<!-------------------------section contacts, form---------------->
+</main><!-- #main -->
 
 <?php
 // get_sidebar();
-get_footer('front');
+get_footer('front-new');

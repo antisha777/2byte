@@ -3,6 +3,10 @@
 @import './common';
 @import './mixins';
 
+
+
+
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -13,17 +17,13 @@
     max-width: 1440px;
     margin: auto;
     padding: 0 15px;
-    // overflow: hidden;
-
-    &_flex {
-        display: flex;
-    }
+    overflow: hidden;
 
     &_two {
         overflow: inherit;
 
             @include _768() {
-                // overflow: hidden;
+                overflow: hidden;
             }
         }
 }
@@ -180,7 +180,7 @@
     }
 
     &__content {
-        margin-top: 160px;
+
         padding-bottom: 50px;
 
         @include _768() {
@@ -320,20 +320,6 @@
     display: flex;
     flex-direction: column;
     text-align: right;
-    position: relative;
-
-    &::after {
-        position: absolute;
-        background: url('./assests/img/icon-phone.png') no-repeat 50%;
-        background-size: cover;
-        text-align: end;
-        content: '';
-        width: 15px;
-        height: 15px;
-        left: 14px;
-        top: 3px;
-        opacity: .6;
-    }
 
     &_page {
             width: 100%;
@@ -344,6 +330,8 @@
         }
 
     &__number {
+        font-size: 18px;
+        font-weight: 600;
         margin-bottom: 8px;
         color: $black;
 
@@ -374,7 +362,7 @@
 
     &__title {
         font-size: 55px;
-        font-weight: 700;
+        font-weight: 600;
         padding-bottom: 60px;
         text-transform: uppercase;
 
@@ -388,12 +376,10 @@
     }
 
     &__subtitle {
-        font-size: 26px;
+        font-size: 28px;
         padding: 0 0 60px 75px;;
         text-transform: uppercase;
         position: relative;
-        font-weight: 500;
-        // line-height: 1;
 
         @include _620() {
             padding-left: 59px;
@@ -446,8 +432,8 @@
 
     &__item {
         display: inline-block;
-        font-size: 18px;
-        font-weight: 600;
+        font: 300 20px/24px 'Gilroy', sans-serif;
+        color: #4c4c4c;
         padding: 20px 0;
         margin-left: 50px;
 
@@ -471,9 +457,9 @@
 
 
         & span {
-            font-size: 28px;
+            font: 400 35px/1 'Open Sans', sans-serif;
             position: relative;
-            color: $header;
+            color: #111718;
             display: inline-block;
             transform: translateY(6px);
 
@@ -609,16 +595,6 @@ h2.about-title {
 
 
 /*main*/
-
-.content {
-    margin-top: 70px;
-    &__right {
-        margin: 60px 0 20px;
-        max-width: 270px;
-        width: 100%;
-
-    }
-}
 
 .section {
     padding: 50px 0;
@@ -931,8 +907,7 @@ h2.about-title {
 
 .saidebar-right-none {
 
-    position: sticky;
-    top: 120px;
+    position: absolute;
     right: 0;
 
     @include _768() {
@@ -1083,9 +1058,7 @@ h2.about-title {
     }
 
     &__title {
-        // font: 700 26px/30px 'Open Sans', sans-serif;
-        font-size: 26px;
-        color: $header;
+        font: 700 26px/30px 'Open Sans', sans-serif;
     }
 
     &__poinst {
@@ -1124,17 +1097,16 @@ h2.about-title {
 
     &__left {
         position: absolute;
-        top: -1px;
+        top: -343px;
         right: 0;
-        left: -100px;
+        left: -399px;
         z-index: -1;
     }
 
     &__right {
         position: absolute;
         top: 585px;
-        // left: 1202px;
-        right: 0;
+        left: 1202px;
         z-index: -1;
     }
 
@@ -1147,7 +1119,7 @@ h2.about-title {
 
 .about {
     display: flex;
-    // margin-right: 300px;
+    margin-right: 300px;
 
      &::before {
         content: '';
@@ -1206,7 +1178,7 @@ h2.about-title {
     }
 
     &__content {
-        max-width: 1050px;
+        max-width: 800px;
 
         // @include _768 {
         //     padding-bottom: 50px;
@@ -1224,13 +1196,13 @@ h2.about-title {
             line-height: 26px;
         }
 
-        &::before {
+            &::before {
             content: "";
             width: 111px;
             height: 9px;
             background: $background-red;
             position: absolute;
-            left: 60%;
+            left: 80%;
             top: -12px;
             z-index: -1
         }
@@ -1428,7 +1400,7 @@ h2.about-title {
 }
 
 .block-left, .block-right {
-    max-width: 460px;
+    max-width: 650px;
     width: 100%;
 }
 
@@ -1799,8 +1771,10 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
 
     &__right {
 
-        font-size: 12px;
-        font-weight: 400;
+        // @include _620() {
+        //     order: -1;
+        //     padding-top: 15px;
+        // }
 
         @include _768() {
             display: none;

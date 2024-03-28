@@ -1,8 +1,4 @@
 @charset "UTF-8";
-:root {
-  --index: calc(1vw + 1vh);
-}
-
 html {
   box-sizing: border-box;
   height: 100%;
@@ -41,7 +37,6 @@ body::before {
 
 a {
   text-decoration: none;
-  color: #333;
 }
 
 button {
@@ -51,10 +46,6 @@ button {
   background: none;
   position: relative;
   overflow: hidden;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 600;
 }
 
 .but-effect:before {
@@ -91,23 +82,6 @@ h1#fps {
   margin-top: 20px;
 }
 
-#toTop {
-  width: 100px;
-  border: 1px solid #ccc;
-  background: #f7f7f7;
-  text-align: center;
-  padding: 5px;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  cursor: pointer;
-  display: none;
-  color: #333;
-  font-family: verdana;
-  font-size: 11px;
-  border-bottom: 4px solid #dc3232;
-}
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -118,13 +92,17 @@ h1#fps {
   max-width: 1440px;
   margin: auto;
   padding: 0 15px;
-}
-.container_flex {
-  display: flex;
+  overflow: hidden;
 }
 .container_two {
   overflow: inherit;
 }
+@media only screen and (max-width: 768px) {
+  .container_two {
+    overflow: hidden;
+  }
+}
+
 .container-menu {
   position: fixed;
   width: 100%;
@@ -264,7 +242,6 @@ h1#fps {
   z-index: 5;
 }
 .header__content {
-  margin-top: 160px;
   padding-bottom: 50px;
 }
 @media only screen and (max-width: 768px) {
@@ -370,19 +347,6 @@ h1#fps {
   display: flex;
   flex-direction: column;
   text-align: right;
-  position: relative;
-}
-.header-phone::after {
-  position: absolute;
-  background: url("./assests/img/icon-phone.png") no-repeat 50%;
-  background-size: cover;
-  text-align: end;
-  content: "";
-  width: 15px;
-  height: 15px;
-  left: 14px;
-  top: 3px;
-  opacity: 0.6;
 }
 .header-phone_page {
   width: 100%;
@@ -393,6 +357,8 @@ h1#fps {
   }
 }
 .header-phone__number {
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: 8px;
   color: #333;
 }
@@ -417,7 +383,7 @@ h1#fps {
 }
 .hero__title {
   font-size: 55px;
-  font-weight: 700;
+  font-weight: 600;
   padding-bottom: 60px;
   text-transform: uppercase;
 }
@@ -432,11 +398,10 @@ h1#fps {
   }
 }
 .hero__subtitle {
-  font-size: 26px;
+  font-size: 28px;
   padding: 0 0 60px 75px;
   text-transform: uppercase;
   position: relative;
-  font-weight: 500;
 }
 @media only screen and (max-width: 620px) {
   .hero__subtitle {
@@ -485,8 +450,8 @@ h1#fps {
 }
 .hero__item {
   display: inline-block;
-  font-size: 18px;
-  font-weight: 600;
+  font: 300 20px/24px "Gilroy", sans-serif;
+  color: #4c4c4c;
   padding: 20px 0;
   margin-left: 50px;
 }
@@ -513,9 +478,9 @@ h1#fps {
   }
 }
 .hero__item span {
-  font-size: 28px;
+  font: 400 35px/1 "Open Sans", sans-serif;
   position: relative;
-  color: #333;
+  color: #111718;
   display: inline-block;
   transform: translateY(6px);
 }
@@ -644,15 +609,6 @@ h2.about-title {
 }
 
 /*main*/
-.content {
-  margin-top: 70px;
-}
-.content__right {
-  margin: 60px 0 20px;
-  max-width: 270px;
-  width: 100%;
-}
-
 .section {
   padding: 50px 0;
 }
@@ -914,8 +870,7 @@ h2.about-title {
 }
 
 .saidebar-right-none {
-  position: sticky;
-  top: 120px;
+  position: absolute;
   right: 0;
 }
 @media only screen and (max-width: 768px) {
@@ -1038,8 +993,7 @@ h2.about-title {
   z-index: -1;
 }
 .popular__title {
-  font-size: 26px;
-  color: #333;
+  font: 700 26px/30px "Open Sans", sans-serif;
 }
 .popular__poinst {
   position: relative;
@@ -1073,15 +1027,15 @@ h2.about-title {
 }
 .block-simbol__left {
   position: absolute;
-  top: -1px;
+  top: -343px;
   right: 0;
-  left: -100px;
+  left: -399px;
   z-index: -1;
 }
 .block-simbol__right {
   position: absolute;
   top: 585px;
-  right: 0;
+  left: 1202px;
   z-index: -1;
 }
 @media only screen and (max-width: 1170px) {
@@ -1093,6 +1047,7 @@ h2.about-title {
 /* about */
 .about {
   display: flex;
+  margin-right: 300px;
 }
 .about::before {
   content: "";
@@ -1148,7 +1103,7 @@ h2.about-title {
   margin-left: 3px;
 }
 .about__content {
-  max-width: 1050px;
+  max-width: 800px;
 }
 .about__text1 {
   font-weight: 400;
@@ -1168,7 +1123,7 @@ h2.about-title {
   height: 9px;
   background: #dc3232;
   position: absolute;
-  left: 60%;
+  left: 80%;
   top: -12px;
   z-index: -1;
 }
@@ -1324,7 +1279,7 @@ h2.about-title {
 }
 
 .block-left, .block-right {
-  max-width: 460px;
+  max-width: 650px;
   width: 100%;
 }
 
@@ -1665,10 +1620,6 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit:hover:before {
 }
 .footer-inner__left_page {
   width: 100%;
-}
-.footer-inner__right {
-  font-size: 12px;
-  font-weight: 400;
 }
 @media only screen and (max-width: 768px) {
   .footer-inner__right {

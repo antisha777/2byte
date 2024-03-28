@@ -46,48 +46,54 @@
 		<!-------------------------section heade------------------------->
         <header class="header">
             
-            <div class="container-menu">
 
-                <div class="header__top">
-                        
-                    <div class="header__logo">
-                        <?php the_custom_logo (); ?>
-                    </div>
-                    <!-- end header__logo -->
-                    <div class="header__menu">
+                <div class="container-menu">
 
-                        <div class="php-code-nav">
-                            <?php wp_nav_menu( array (
-                                'theme_location'  => 'top',
-                                'menu'            => '',
-                                'container'       => 'div',
-                                'container_class' => 'navigation  header__nav header__nav_none',
-                                'menu_class'      => 'navigation__list',
-                                'menu_id'         => '',
-                                'echo'            => true,
-                                'fallback_cb'     => 'wp_page_menu',
-                                'before'          => '',
-                                'after'           => '',
-                                'link_before'     => '',
-                                'link_after'      => '',
-                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                'depth'           => 0,
-                                'walker'          => '',
-                            ) ); ?>
+                    <div class="header__top">
+
+                            
+                            <div class="header__logo">
+                                <?php the_custom_logo (); ?>
+                            </div>
+                            <div class="header__menu">
+
+                                <div class="php-code-nav">
+                                        <?php wp_nav_menu( array (
+                                                    'theme_location'  => 'top',
+                                                    'menu'            => '',
+                                                    'container'       => 'div',
+                                                    'container_class' => 'navigation  header__nav header__nav_none',
+                                                    'menu_class'      => 'navigation__list',
+                                                    'menu_id'         => '',
+                                                    'echo'            => true,
+                                                    'fallback_cb'     => 'wp_page_menu',
+                                                    'before'          => '',
+                                                    'after'           => '',
+                                                    'link_before'     => '',
+                                                    'link_after'      => '',
+                                                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                                    'depth'           => 0,
+                                                    'walker'          => '',
+
+                                            ) ); ?>
+                                </div>
+
+                            </div>
+
+                            <div class="header-phone">
+                                <?php dynamic_sidebar( 'sidebar-telephone' ); ?>
+                                <!-- <a href="tel:89521555936" class="header-phone__number">8 (952) 155-59-36</a>
+                                <time class="header-phone__schedule">с 10.00 до 19.00 без выходных</time> -->
+                            </div>
+
+                            </div>
                         </div>
-                        <!-- end php-code-nav -->                        
-                    </div>
-                    <!-- end header__menu -->
-                    <div class="header-phone">
-                        <?php dynamic_sidebar( 'sidebar-telephone' ); ?>
-                    </div>
-                    <!-- end header-phone -->
 
-                </div>  
-                <!-- end header__top -->
-            </div>
-            <!-- end container-menu -->
+                    </div>  
+
+                </div>
         
+            
 
             <div class="container">
 
@@ -95,9 +101,9 @@
                     <div class="hero header__hero">
                         <div class="hero__binary">10101010101010</div>
                         <div class="hero__binary hero__binary_two">101001</div>
-                        <h1 class="hero__title"><?php bloginfo('name'); ?></h1>
-                        <div class="hero__subtitle"><?php bloginfo('description'); ?></div>
-                        <button data-fancybox data-src="#form" class="btn btn_large">Позвонить мне</button>
+                        <h1 class="hero__title">Компьютерный сервис в Томске</h1>
+                        <div class="hero__subtitle">Ремонт компьютеров, ноутбуков, телевизоров, телефонов, моноблоков</div>
+                        <button data-fancybox data-src="#form" class="btn btn_large">Записаться онлайн</button>
                         <div class="hero__social">
                             <ul class="social social_horizon">
                                 <li class="social__item"><a href="#"><img class="social__link" src="<?php echo get_template_directory_uri() ?>/assests/img/vk.png" alt="Vk"></a></li>
@@ -110,8 +116,7 @@
                     <div class="header__codepen">
                         <div class="header__wave"></div>
                         <!-- <img src="<?php echo get_template_directory_uri() ?>/assests/img/header-img.png" alt=""> -->
-                        <!-- <video data-v-4e7c03c7="" playsinline="" muted="muted" autoplay="autoplay" loop="loop" src="<?php echo get_template_directory_uri() ?>/assests/video/rgb.mp4" style=""></video> -->
-                        <img src="<?php echo get_header_image(); ?>" alt="<?php bloginfo('title'); ?>">
+                        <video data-v-4e7c03c7="" playsinline="" muted="muted" autoplay="autoplay" loop="loop" src="<?php echo get_template_directory_uri() ?>/assests/video/rgb.mp4" style=""></video>
                     </div>
 
                     <ul class="social social_vertical header__social">
