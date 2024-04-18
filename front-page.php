@@ -19,10 +19,10 @@ get_header('front-new');
     </div>
     <!-- end content -->
     <div class="container container_flex">
-        <div class=" content__left">
+        <div class="content__left">
             <!-------------------------section about------------------------->
             <section id="about" class="section">
-                <div class="container container_two">
+                <div class="about-content about-content_two">
                     <div class="section__header">
                         <!-- <h2 class="about-title">Ремонтируем компьютерную технику</h2> -->
                     </div>
@@ -65,14 +65,14 @@ get_header('front-new');
             </section>
             <!------ Услуги ----->
             <section id="popular" class="section">
-                <div class="container">
+                
                     <div class="section__header">
                         <h2 class="about-title section__title">Основные услуги</h1>
                     </div>
                         <div class="services__inner popular">
                             <div class="row popular__row">
 
-                                <div class="column popular__col">
+                                <div class="column popular__col wow fadeInLeft">
                                     <a href="<?php echo get_permalink() ?>/repair/computer-repair" class="popular__link">
                                         <div class="popular__box">
                                             <div class="popular__overlay"></div>
@@ -84,7 +84,7 @@ get_header('front-new');
                                     </a>
                                 </div>
 
-                                <div class="column popular__col">
+                                <div class="column popular__col wow fadeInRight">
                                     <a href="<?php echo get_permalink() ?>/repair/laptop-repair" class="popular__link">
                                         <div class="popular__box">
                                             <div class="popular__overlay"></div>
@@ -97,7 +97,7 @@ get_header('front-new');
                                     </a>
                                 </div>
 
-                                <div class="column popular__col">
+                                <div class="column popular__col wow fadeInLeft">
                                     <a href="<?php echo get_permalink() ?>/repair/repair-tv" class="popular__link">
                                         <div class="popular__box">
                                             <div class="popular__overlay"></div>
@@ -109,7 +109,7 @@ get_header('front-new');
                                     </a>
                                 </div>
 
-                                <div class="column popular__col">
+                                <div class="column popular__col wow fadeInRight">
                                     <a href="<?php echo get_permalink() ?>/repair/phone-repair" class="popular__link">
                                         <div class="popular__box">
                                             <div class="popular__overlay"></div>
@@ -122,7 +122,7 @@ get_header('front-new');
                                     </a>
                                 </div>
 
-                                <div class="column popular__col">
+                                <div class="column popular__col wow fadeInLeft">
                                     <a href="/" class="popular__link">
                                         <div class="popular__box">
                                             <div class="popular__overlay"></div>
@@ -134,7 +134,7 @@ get_header('front-new');
                                     </a>
                                 </div>
 
-                                <div class="column popular__col">
+                                <div class="column popular__col wow fadeInRight">
                                     <a href="<?php echo get_permalink() ?>/services/computer-help" class="popular__link">
                                         <div class="popular__box">
                                             <div class="popular__overlay"></div>
@@ -150,12 +150,11 @@ get_header('front-new');
                             <!-- end row -->
                         </div>
                         <!-- end services__inner -->
-                </div>
-                <!-- end container -->
+                
             </section>
             <!----О нас ---->
             <section id="we" class="section">
-                <div class="container">
+                
                     <div class="selection">
                         <div class="selection__title">
                             <h3 class="">Нас выбирают</h3>
@@ -164,55 +163,55 @@ get_header('front-new');
                         <div class="selection__inner">
 
                             <div class="selection__col">
-                                <img src="./img/like.png" alt="icon1" class="column__icon">
-                                <h3 class="column__title">Удобно</h3>
-                                <div class="column__description">
+                                <img data-wow-iteration="infinite" src="<?php echo get_template_directory_uri() ?>/img/like.png" alt="icon1" class="column__icon wow pulse">
+                                <h3 class="column__title wow fadeIn">Удобно</h3>
+                                <div class="column__description wow fadeInUp">
                                     <p class="column__subtitle subtitle_width">Мы выполним ремонт компьютеров в удобное для Вас время. Вы можете привезти его в наш сервис или вызвать мастера по ремонту на дом</p>
                                 </div>
                             </div>
 
                             <div class="selection__col">
-                                <img src="./img/free.png" alt="icon2" class="column__icon">
-                                <h3 class="column__title">Бесплатная диагностика</h3>
-                                <div class="column__description">
+                                <img data-wow-iteration="infinite" src="<?php echo get_template_directory_uri() ?>/img/free.png" alt="icon2" class="column__icon wow pulse">
+                                <h3 class="column__title wow fadeIn">Бесплатная диагностика</h3>
+                                <div data-wow-delay=".5s" class="column__description wow fadeInUp">
                                     <p class="column__subtitle subtitle_width">Бесплатный выезд мастера по Томску в течении часа. Как правило, ремонт компьютеров на дому составляет 1,5 часа</p>
                                 </div>
                             </div>
 
                             <div class="selection__col">
-                                <img src="./img/time.png" alt="icon3" class="column__icon">
-                                <h3 class="column__title">Быстро</h3>
-                                <div class="column__description">
+                                <img data-wow-iteration="infinite" src="<?php echo get_template_directory_uri() ?>/img/time.png" alt="icon3" class="column__icon wow pulse">
+                                <h3 class="column__title wow fadeIn">Быстро</h3>
+                                <div data-wow-delay="1s" class="column__description wow fadeInUp">
                                     <p class="column__subtitle subtitle_width">Ремонт компьютеров в нашем сервисном центре проходит быстро и, как правило, длится 3 часаа</p>
                                 </div>
                             </div>
                             
                         </div>
                     </div>
-                </div>
+                
             </section>
             <!--  Price -->
             <section id="price" class="section">
-                <div class="container">
+                
                     <div class="section__header">
                         <h2 class="section__title">Услуги и цены</h2>
                     </div>
                     <div class="services__inner">    
                         <div id="myTabs" class="tabs">
-                            <nav class="navigation tabs__navigation">
-                                <ul class="navigation__list tabs__links "> 
-                                <li class="navigation__item"><a class="navigation__link">Ремонт компьютеров</a></li> 
-                                <li class="navigation__item"><a class="navigation__link">Ремонт ноутбуков</a></li> 
-                                <li class="navigation__item"><a class="navigation__link">Ремонт телевизоров</a></li>
-                                <li class="navigation__item"><a class="navigation__link">Ремонт смартфонов</a></li>
-                                <li class="navigation__item"><a class="navigation__link">ИТ - Услуги</a></li>
-                                <li class="navigation__item"><a class="navigation__link">Компьютерная помощь</a></li>
+                            <nav class="tabs__navigation">
+                                <ul class="tabs__links"> 
+                                    <li class="navigation__item"><a class="navigation__link">Ремонт компьютеров</a></li> 
+                                    <li class="navigation__item"><a class="navigation__link">Ремонт ноутбуков</a></li> 
+                                    <li class="navigation__item"><a class="navigation__link">Ремонт телевизоров</a></li>
+                                    <li class="navigation__item"><a class="navigation__link">Ремонт смартфонов</a></li>
+                                    <li class="navigation__item"><a class="navigation__link">ИТ - Услуги</a></li>
+                                    <li class="navigation__item"><a class="navigation__link">Компьютерная помощь</a></li>
                                 </ul>
                             </nav>
                             <div class="tabs__content"> 
                                 <!-- Ремонт компьютеров -->
                                 <div class="tabs__item">
-                                    <div class="block-left">
+                                    <div class="block-left wow fadeInLeft">
                                         <div class="block block_background">
                                             <h3 class="block__title">Диагностика компьютеров</h3>
                                             <p class="block__money">0 &#x20bd;</p>
@@ -234,7 +233,7 @@ get_header('front-new');
                                             <p class="block__subtitle">Без разбора</p>
                                         </div>
                                     </div>
-                                    <div class="block-right">
+                                    <div class="block-right wow fadeInRight">
                                         <div class="block block_background">
                                             <h3 class="block__title">Ремонт материнской платы</h3>
                                             <p class="block__money">от 500 &#x20bd;</p>
@@ -328,28 +327,6 @@ get_header('front-new');
                                             <p class="block__subtitle"></p>
                                         </div>
                                     </div>
-                                    <!-- <div class="block-right">
-                                        <div class="block">
-                                            <h3 class="block__title"></h3>
-                                            <p class="block__money"> &#x20bd;</p>
-                                            <p class="block__subtitle"></p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title"></h3>
-                                            <p class="block__money"> &#x20bd;</p>
-                                            <p class="block__subtitle"></p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title"></h3>
-                                            <p class="block__money"> &#x20bd;</p>
-                                            <p class="block__subtitle"></p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title"></h3>
-                                            <p class="block__money"> &#x20bd;</p>
-                                            <p class="block__subtitle"></p>
-                                        </div>
-                                    </div> -->
                                 </div>
                                 <!-- Ремонт смартфонов -->
                                 <div class="tabs__item">
@@ -422,27 +399,6 @@ get_header('front-new');
                                             <p class="block__subtitle">Обслуживание офисов</p>
                                         </div>
                                     </div>
-                                    <!-- <div class="block-right">
-                                        <div class="block">
-                                            <h3 class="block__title"></h3>
-                                            <p class="block__money"></p>
-                                            <p class="block__subtitle"></p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title"></h3>
-                                            <p class="block__money"></p>
-                                            <p class="block__subtitle"></p>
-                                        </div>
-                                        <div class="block">
-                                            <h3 class="block__title"></h3>
-                                            <p class="block__money"></p>
-                                            <p class="block__subtitle"></p>
-                                        </div>
-                                        <div class="block"></h3>
-                                            <p class="block__money"></p>
-                                            <p class="block__subtitle"></p>
-                                        </div>
-                                    </div> -->
                                 </div>
                                 <!-- Компьютерная помощь -->
                                 <div class="tabs__item">
@@ -494,7 +450,7 @@ get_header('front-new');
                             </div> 
                             </div>
                     </div>                    
-                </div>
+                
             </section>
 
             <section class="section">

@@ -22,18 +22,18 @@
                         <div class="container-contacts">
                             <div class="container-contacts_wight">
                                 <div class="container-info">
-                                    <div class="container-info__byte">2Б</div>
+                                    <div class="container-info__byte wow fadeIn">2Б</div>
                                     <div class="container-info__service">Сервисный центр</div>
                                     <div class="container-info__image">
                                         <img src="<?php echo get_template_directory_uri() ?>/assests/img/Telephone-System.jpg" alt="Менеджер">
                                     </div>
-                                    <div class="container-info__item"><h4>Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время</h4></div>
+                                    <div class="container-info__item wow fadeInUp"><h4>Наш менеджер перезвонит в течение нескольких минут, уточнит подробности и согласует время</h4></div>
                                 </div>
                                 <div class="contact-form">
                                     <div class="contact-form__padding">
                                         <div class="row">
                                             <div class="column">
-                                                <?php get_sidebar('footer'); ?>
+                                                <?php get_sidebar('footer-d'); ?>
                                                 <p class="column__police">Нажимая на кнопку вы соглашаетесь с 
                                                     <a href="#" class="column__blue">обработкой персональных данных</a>
                                                 </p>                                        
@@ -79,30 +79,12 @@
 						<p class="footer-inner__info footer-inner__info_padding">Елизаровых 44</p>
 					</div>
                     <div class="footer-inner__right">
-                        <div class="header__menu">
-
-                            <div class="php-code-nav">
-                                <?php wp_nav_menu( array (
-                                    'theme_location'  => 'top',
-                                    'menu'            => '',
-                                    'container'       => 'div',
-                                    'container_class' => 'navigation  header__nav header__nav_none',
-                                    'menu_class'      => 'navigation__list',
-                                    'menu_id'         => '',
-                                    'echo'            => true,
-                                    'fallback_cb'     => 'wp_page_menu',
-                                    'before'          => '',
-                                    'after'           => '',
-                                    'link_before'     => '',
-                                    'link_after'      => '',
-                                    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                    'depth'           => 0,
-                                    'walker'          => '',
-                                ) ); ?>
+                        <a href="https://t.me/+79528853003">
+                            <div id="marquee" class="marquee-site">
+                                <div id='mylist' class='garage-title'>разработка сайтов  тут  создание сайтов  тут</div>
+                                <div id='mylist' class='garage-title'>разработка сайтов  тут  создание сайтов  тут</div>
                             </div>
-                            <!-- end php-code-nav -->                        
-                        </div>
-                        <!-- end header__menu -->
+                        </a>
                     </div>
                 </div>
             </div>
@@ -127,17 +109,5 @@
 <div id = "toTop" > ^ Наверх </div>
 
 </body>
-<!-- <script type="text/javascript" src="./js/cube.js"></script> -->
-<!-- <script  type="module" src="<?php echo get_template_directory_uri() ?>/assests/js/main.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/tabs.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/whtemobil.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/moblmenu.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/cont-form.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/redAbout.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/anime.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/button.js"></script>
-
+<?php include (TEMPLATEPATH . '/template-parts/scripts-footer.php'); ?>
 </html>

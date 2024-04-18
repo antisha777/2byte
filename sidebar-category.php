@@ -12,6 +12,7 @@
                                     <div class="widget widget_cotegories saidebar-menu">
 
                                         <?php wp_nav_menu( array (
+                                            'theme_location'  => 'menu-1',
                                             'container'       => 'div',
                                             'container_class' => 'menu-menu-1-container',
                                             'menu_class'      => 'menu-menu-1-container',

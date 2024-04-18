@@ -179,6 +179,20 @@ function reg_sidebar_footer() {
        );
 }
 
+function reg_sidebar_footer_d() {
+    register_sidebar(
+      array(
+      		'id' 			=> 'sidebar-footer-d',
+        	'name' 			=> __( 'footer-d' ),
+        	'description'	=> __( 'footer-d form.' ),
+        	'before_widget' => '<div id="%1$s" class="my_widget %2$s">',
+        	'after_widget'  => '</div>',
+        	'before_title'  => '<h3 class="my_widget-title">',
+        	'after_title'   => '</h3>'
+        )
+       );
+}
+
 function reg_sidebar_telephone() {
     register_sidebar(
       array(
@@ -198,6 +212,8 @@ add_action( 'widgets_init', 'twobytes_widgets_init' );
 add_action( 'widgets_init', 'reg_sidebar_form' );
 
 add_action( 'widgets_init', 'reg_sidebar_footer' );
+
+add_action( 'widgets_init', 'reg_sidebar_footer_d' );
 
 add_action( 'widgets_init', 'reg_sidebar_mobile' );
 
@@ -265,22 +281,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // Редерект карты
 
 /** add_action( 'init', 'add_new_url_main_sitemap' );
-add_filter( 'home_url', 'fix_wp_sitemap_url', 11, 2 );
-
-# Добавляет правило с новым адресом карты сайта
-function add_new_url_main_sitemap() {
-	add_rewrite_rule( '^sitemap\.xml$', 'index.php?sitemap=index', 'top' );
-}
-
-# Заменяет url с wp-sitemap.xml на sitemap.xml
-function fix_wp_sitemap_url( $url, $path ) {
-
-	if ( '/wp-sitemap.xml' === $path ) {
-		return str_replace( '/wp-sitemap.xml', '/sitemap.xml', $url );
-	}
-
-	return $url;
-}**/
+*/
 
 /** отключение карты **/
 

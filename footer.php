@@ -79,11 +79,12 @@
 						<p class="footer-inner__info footer-inner__info_padding">Елизаровых 44</p>
 					</div>
                     <div class="footer-inner__right">
-                        <div id="marquee" class="blink-2">
-                            <marquee class="merquee-footer" behavior="scroll" weight="150" loop="infinity" truespeed="200" scrolldelay="200" onmouseover="this.stop()" onmouseout="this.start()">
-                            <div id='mylist' class='garage-title blink-2'></div>#Ремонтцифровойтехники #Ремонткомпьютероввтомске #Ремонтноутбуковвтомске #Сервисныйцентртомск #Ремонттелефоноввтомске #Ремонтпланшетоввтомске #Ремонтмонитороввтомске #Ремонттелевизороввтомске
-                            </marquee>
-                        </div>
+                        <a href="https://t.me/+79528853003">
+                            <div id="marquee" class="marquee-site">
+                                <div id='mylist' class='garage-title'>разработка сайтов  тут  создание сайтов  тут</div>
+                                <div id='mylist' class='garage-title'>разработка сайтов  тут  создание сайтов  тут</div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -108,16 +109,5 @@
 <div id = "toTop" > ^ Наверх </div>
 
 </body>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/tabs.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/whtemobil.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/moblmenu.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/cont-form.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/redAbout.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/anime.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/calc.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/slide.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assests/js/button.js"></script>
+<?php include (TEMPLATEPATH . '/template-parts/scripts-footer.php'); ?>
 </html>

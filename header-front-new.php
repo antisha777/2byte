@@ -13,121 +13,20 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
-   <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(92862030, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/92862030" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-	<?php wp_head(); ?>
+<?php include (TEMPLATEPATH . '/template-parts/head.php'); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div class="wrapper">
-		<!-------------------------section heade------------------------->
-        <header class="header">
-            
-            <div class="container-menu">
-
-                <div class="header__top">
-                        
-                    <div class="header__logo">
-                        <?php the_custom_logo (); ?>
-                    </div>
-                    <!-- end header__logo -->
-                    <div class="header__menu">
-
-                        <div class="php-code-nav">
-                            <?php wp_nav_menu( array (
-                                'theme_location'  => 'top',
-                                'menu'            => '',
-                                'container'       => 'div',
-                                'container_class' => 'navigation  header__nav header__nav_none',
-                                'menu_class'      => 'navigation__list',
-                                'menu_id'         => '',
-                                'echo'            => true,
-                                'fallback_cb'     => 'wp_page_menu',
-                                'before'          => '',
-                                'after'           => '',
-                                'link_before'     => '',
-                                'link_after'      => '',
-                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                                'depth'           => 0,
-                                'walker'          => '',
-                            ) ); ?>
-                        </div>
-                        <!-- end php-code-nav -->                        
-                    </div>
-                    <!-- end header__menu -->
-                    <div class="header-phone">
-                        <?php dynamic_sidebar( 'sidebar-telephone' ); ?>
-                    </div>
-                    <!-- end header-phone -->
-
-                </div>  
-                <!-- end header__top -->
-            </div>
-            <!-- end container-menu -->
+    <!-------------------------section heade------------------------->
+    <header class="header">
         
-
-            <div class="container">
-
-                <div class="header__content">
-                    <div class="hero header__hero">
-                        <div class="hero__binary">10101010101010</div>
-                        <div class="hero__binary hero__binary_two">101001</div>
-                        <h1 class="hero__title"><?php bloginfo('name'); ?></h1>
-                        <div class="hero__subtitle"><?php bloginfo('description'); ?></div>
-                        <button data-fancybox data-src="#form" class="btn btn_large">Позвонить мне</button>
-                        <div class="hero__social">
-                            <ul class="social social_horizon">
-                                <li class="social__item"><a href="#"><img class="social__link" src="<?php echo get_template_directory_uri() ?>/assests/img/vk.png" alt="Vk"></a></li>
-                                <li class="social__item"><a href="https://wa.me/79521555936?text=Здравствуйте%2C+у+меня+есть+вопрос"><img class="social__link"  src="<?php echo get_template_directory_uri() ?>/assests/img/whats.png" alt="watsapp"></a></li>
-                                <li class="social__item"><a href="#"><img class="social__link"  src="<?php echo get_template_directory_uri() ?>/assests/img/telegram.png" alt="telegram"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="header__codepen">
-                        <div class="header__wave"></div>
-                        <!-- <img src="<?php echo get_template_directory_uri() ?>/assests/img/header-img.png" alt=""> -->
-                        <!-- <video data-v-4e7c03c7="" playsinline="" muted="muted" autoplay="autoplay" loop="loop" src="<?php echo get_template_directory_uri() ?>/assests/video/rgb.mp4" style=""></video> -->
-                        <img src="<?php echo get_header_image(); ?>" alt="<?php bloginfo('title'); ?>">
-                    </div>
-
-                    <ul class="social social_vertical header__social">
-                        <li class="social__item"><a href="#"><img class="social__link" src="<?php echo get_template_directory_uri() ?>/assests/img/vk_w.png" alt="Vk"></a></li>
-                        <li class="social__item"><a href="https://wa.me/79521555936?text=Здравствуйте%2C+у+меня+есть+вопрос"><img class="social__link"  src="<?php echo get_template_directory_uri() ?>/assests/img/whats_w.png" alt="watsapp"></a></li>
-                        <li class="social__item"><a href="#"><img class="social__link"  src="<?php echo get_template_directory_uri() ?>/assests/img/telegram_w.png" alt="telegram"></a></li>
-                    </ul>
-
-                </div>
-                    <div class="hero__triangle"></div>
-                    <div class="hero__columns">
-                        <div class="hero__item"><span>01</span>&nbsp;/&nbsp;Быстро</div>
-                        <div class="hero__item"><span>02</span>&nbsp;/&nbsp;Качественно</div>
-                        <div class="hero__item"><span>03</span>&nbsp;/&nbsp;Гарантия</div>
-                    </div>
-            </div>
+        <?php include (TEMPLATEPATH . '/template-parts/menu-top-front.php'); ?>
+        <!-- end container-menu -->
+        
+        <div class="container">
+            <?php include (TEMPLATEPATH . '/template-parts/header-content.php'); ?>
         </div>
 
-        </header>
+    </header>

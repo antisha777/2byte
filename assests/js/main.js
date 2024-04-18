@@ -12,7 +12,7 @@ window.onload = () =>  {
         console.log(event.target.scrollTop) 
     });
      
-    const smoothScrollLinks = document.querySelectorAll('.navigation__link'); 
+    const smoothScrollLinks = document.querySelectorAll('.tabs__list'); 
      
     for (let link of smoothScrollLinks) { 
       link.addEventListener('click', event => { 

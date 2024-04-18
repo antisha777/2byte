@@ -1,7 +1,7 @@
 <?php
 /**
  * 
- * Template Name: Ремонт телефонов
+ * Template Name: Ремонт телефонов(new)
  *
  */
 
@@ -12,34 +12,37 @@ get_header();
     <section id="about" class="section">
         <div class="container">
             <div class="section__inner">
-                <div class="about">
-                    <div class="about__page">
-                        <h2 class="about-title about-title_padding"><?php the_title(); ?></h2>
-                        <div class="page-phone">
-                            <div class="page-phone__row">
-                                <div class="page-phone__col page-phone__col_left">
-                                    <div class="page-phone__img">
-                                        <a data-fancybox href="https://youtu.be/b3iuta-HpqM">
-                                            <div class="page-phone__play"></div>
-                                        </a>
-                                        <div class="page-phone__overlay"></div>
-                                        <img src="<?php echo get_template_directory_uri() ?>/assests/img/telephone-page01.jpg">
+
+                <div class="content__left">
+                    <div class="about">
+                        <div class="about__page">
+                            <h2 class="about-title about-title_padding"><?php the_title(); ?></h2>
+                            <div class="page-phone">
+                                <div class="page-phone__row">
+                                    <div class="page-phone__col page-phone__col_left">
+                                        <div class="page-phone__img">
+                                            <a data-fancybox href="https://youtu.be/b3iuta-HpqM">
+                                                <div class="page-phone__play"></div>
+                                            </a>
+                                            <div class="page-phone__overlay"></div>
+                                            <img src="<?php echo get_template_directory_uri() ?>/assests/img/telephone-page01.jpg">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="page-phone__col page-phone__col_right">
-                                    <div class="page-phone__wrap">
-                                        <div class="page-phone__item">
-                                            <h3 class="page-phone__title">Срочный ремонт</h3>
-                                            <div class="page-phone__subtitle">Мы производим ремонт мобильных телефонов и смартфонов ориентируясь на самые высокие стандарты качества.</div>
+                                    <div class="page-phone__col page-phone__col_right">
+                                        <div class="page-phone__wrap">
+                                            <div class="page-phone__item">
+                                                <h3 class="page-phone__title">Срочный ремонт</h3>
+                                                <div class="page-phone__subtitle">Мы производим ремонт мобильных телефонов и смартфонов ориентируясь на самые высокие стандарты качества.</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="hero__triangle"></div>
                         </div>
-                        <div class="hero__triangle"></div>
                     </div>
-                    <div class="saidebar saidebar-right-none"><?php get_sidebar('category'); ?></div>
                 </div>
+
             </div>
             <div class="standards">
                 <div class="standards__row">
@@ -364,4 +367,4 @@ get_header();
 </main><!-- #main -->
 
 <?php
-get_footer();?>
+get_footer('front-new');?>

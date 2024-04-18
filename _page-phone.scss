@@ -16,6 +16,12 @@
     }
 }
 
+.about {
+    @include _620() {
+        display: block;        
+    }
+}
+
 .page-phone {
 
     &::before {
@@ -155,6 +161,10 @@
         font-size: 36px;
         margin-bottom: 24px;
         position: relative;
+
+        @include _420() {
+            font-size: 28px;
+        }
 
         &::before {
             transition: all 0.3s ease-in-out;
@@ -431,6 +441,9 @@
         display: inline-block;
         position: relative;
         margin-bottom: 40px;
+        @include _420() {
+            font-size: 28px;
+        }
 
         &::before {
             content: '';
@@ -462,6 +475,9 @@
         padding-left: 94px;
         position: relative;
         margin-bottom: 74px;
+        @include _420() {
+            font-size: 18px;
+        }
 
         &::before {
             content: '';
@@ -480,7 +496,7 @@
         top: 30%;
         right: 0;
         font: 700 150px/1 'HelveticaNeueCyr', sans-serif;
-        color: #f4f6f2;
+        color: $whitesmoke;
         z-index: -1;
 
         &::before {
@@ -491,6 +507,9 @@
             font: 600 22px/1 "Open sans", sans-serif;
             z-index: 1;
             color: #3d3e43;
+            @include _420() {
+                opacity: .5;
+            }
         }
 
         &::after {
@@ -501,6 +520,9 @@
             font: 600 26px/1 "Open sans", sans-serif;
             z-index: 1;
             color: $background-red;
+            @include _420() {
+                opacity: .5;
+            }
         }
     }
 
