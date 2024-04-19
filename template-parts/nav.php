@@ -1,6 +1,6 @@
 <div class="php-code-nav">
     <?php wp_nav_menu( array (
-        // 'theme_location'  => 'menu-1',
+        'theme_location'  => 'top',
         'menu'            => '',
         'container'       => 'div',
         'container_class' => 'navigation  header__nav header__nav_none',

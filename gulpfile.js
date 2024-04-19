@@ -22,8 +22,8 @@ gulp.task('serve', function(done) {
         
     });
 
-    gulp.watch('./*.scss', gulp.series('sass'));
-    gulp.watch("./*.php").on('change', () => {
+    gulp.watch('**/*.scss', gulp.series('sass'));
+    gulp.watch("**/*.php").on('change', () => {
       browserSync.reload();
       done();
     });

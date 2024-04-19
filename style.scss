@@ -23,12 +23,8 @@
     }
 
     &_two {
-        overflow: inherit;
-
-            @include _768() {
-                // overflow: hidden;
-            }
-        }
+        overflow: inherit;    
+    }
 }
 
 .about-content {
@@ -486,7 +482,10 @@
             @include _480() {
                 font-size: 28px;
             }
-        } 
+        }
+        &_white {
+            color: $white;
+        }
     }
 
     &__subtitle {
@@ -528,6 +527,9 @@
                     display: none;
                 }
             }
+        }
+        &_white {
+            color: $white;
         }
     }
 
@@ -757,7 +759,7 @@ h2.about-title {
 
 .section {
     padding: 50px 0;
-
+    &_top {margin-top: 50px;}
     &__header {
 
         &_stretch {
@@ -2022,9 +2024,9 @@ input.wpcf7-form-control.has-spinner.wpcf7-submit {
 
 .section {
 
-    @include _480() {
-        padding: 0px;
-    }
+    // @include _480() {
+    //     padding: 0px;
+    // }
 
     &__title {
 
@@ -2322,6 +2324,52 @@ transition: all 0.4s ease-in-out;
         // background-size: cover;
     }
 }
+
+.card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    background: black;
+    margin-top: 60px;
+    @include _480 {
+        height: 550px;
+    }
+    & > video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.75;
+    }
+}
+
+.header__img-vc {
+    @include _768{display: none;}
+    & > img {
+        @include _1280 {
+            opacity: 1;
+        }
+    }
+}
+
+.hero__item_white {
+    color: $white;
+    & > span {
+        color: $white;
+    }
+}
+.vc {
+    &__title {
+        margin-bottom: 10px
+    }
+    &__content {
+        font-size: 18px;
+        & p {margin-bottom: 10px;}
+        & img {margin: 30px 0;}
+    }
+}
+.navigation__link-vc{padding: 0 !important;}
 
 // end
 
